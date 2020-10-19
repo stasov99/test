@@ -1,0 +1,4 @@
+﻿  calc.cpp
+C:\Users\Professional\source\repos\calc\calc\calc.cpp(12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Professional\source\repos\calc\calc\calc.cpp(21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  calc.vcxproj -> C:\Users\Professional\source\repos\calc\Debug\calc.exe
