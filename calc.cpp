@@ -16,6 +16,14 @@ int calc(float B, float h, float u, float f, float H)
 		return 0;
 }
 
+void test(float B, float h, float u, float f, float H)
+{
+	float a = (B + 2 * h * tan((45 - u / 2) / 57.3)) / 2 / f;
+	std::cout << a << std::endl;
+	assert(a < 2*H);
+	std::cout << "TEST OK" << std::endl;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
