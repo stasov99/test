@@ -6,23 +6,7 @@
 #include <conio.h>
 #include <locale.h>
 #include <cassert>
-
-int calc(float B, float h, float u, float f, float H)
-{
-	float h1 = (B + 2 * h * tan((45 - u / 2)/57.3))/2/f;
-	if (h1 < 2 * H)
-		return 1;
-	else
-		return 0;
-}
-
-void test(float B, float h, float u, float f, float H)
-{
-	float a = (B + 2 * h * tan((45 - u / 2) / 57.3)) / 2 / f;
-	std::cout << a << std::endl;
-	assert(a < 2*H);
-	std::cout << "TEST OK" << std::endl;
-}
+#include "Header.h"
 
 int main()
 {
@@ -46,6 +30,7 @@ int main()
 			std::cout << "Свод обрушения" << std::endl;
 		else
 			std::cout << "Столб обрушения" << std::endl;
+		test(B, h, u, f, H, num);
 		break;
 	case 2:
 		B = 10;
@@ -55,8 +40,8 @@ int main()
 			std::cout << "Свод обрушения" << std::endl;
 		else
 			std::cout << "Столб обрушения" << std::endl;
+		test(B, h, u, f, H, num);
 		break;
 	}
-	test(B, h, u, f, H);
 	_getch();
 }
