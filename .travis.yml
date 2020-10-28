@@ -2,4 +2,4 @@ language: cpp
 
 sqript:
     - make
-    - make test
+    - make calc
