@@ -5,6 +5,3 @@ before_install:
   - sudo apt-get install -y make
   - sudo apt-get install libc6-dev
   - sudo apt-get install build-essential
-script: 
-  - make
-  - make test
