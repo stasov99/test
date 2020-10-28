@@ -1,5 +1,5 @@
 language: cpp
 
-sqript:
+script:
     - make
-    - make calc
+    - make test
