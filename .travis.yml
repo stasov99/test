@@ -2,4 +2,4 @@ language: cpp
 
 script:
     - make
-    - make test
+    - make calc
