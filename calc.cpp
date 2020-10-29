@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <math.h>
-#include <conio.h>
 #include <locale.h>
 #include <cassert>
 #include "Header.h"
@@ -12,13 +11,13 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int num;
-	float f = 3.5; // коэффициент крепости
-	float u = 65; // угол внутреннего трения
+	float f = 3.5; // ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІ ГЄГ°ГҐГЇГ®Г±ГІГЁ
+	float u = 65; // ГіГЈГ®Г« ГўГ­ГіГІГ°ГҐГ­Г­ГҐГЈГ® ГІГ°ГҐГ­ГЁГї
 	float B, h, H;
-	std::cout << "Первичный вид расчетов представлен для горной породы Мергель (f = 3,5, u = 65)" << std::endl;
-	std::cout << "Выберите первичные данные:" << std::endl;
-	std::cout << "1. H = 20м, h = 9м, B = 10м" << std::endl;
-	std::cout << "2. H = 0,5м, h = 9м, B = 10м" << std::endl;
+	std::cout << "ГЏГҐГ°ГўГЁГ·Г­Г»Г© ГўГЁГ¤ Г°Г Г±Г·ГҐГІГ®Гў ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­ Г¤Г«Гї ГЈГ®Г°Г­Г®Г© ГЇГ®Г°Г®Г¤Г» ГЊГҐГ°ГЈГҐГ«Гј (f = 3,5, u = 65)" << std::endl;
+	std::cout << "Г‚Г»ГЎГҐГ°ГЁГІГҐ ГЇГҐГ°ГўГЁГ·Г­Г»ГҐ Г¤Г Г­Г­Г»ГҐ:" << std::endl;
+	std::cout << "1. H = 20Г¬, h = 9Г¬, B = 10Г¬" << std::endl;
+	std::cout << "2. H = 0,5Г¬, h = 9Г¬, B = 10Г¬" << std::endl;
 	std::cin >> num;
 	switch (num)
 	{
@@ -27,9 +26,9 @@ int main()
 		h = 9;
 		H = 20;
 		if (calc(B, h, u, f, H))
-			std::cout << "Свод обрушения" << std::endl;
+			std::cout << "Г‘ГўГ®Г¤ Г®ГЎГ°ГіГёГҐГ­ГЁГї" << std::endl;
 		else
-			std::cout << "Столб обрушения" << std::endl;
+			std::cout << "Г‘ГІГ®Г«ГЎ Г®ГЎГ°ГіГёГҐГ­ГЁГї" << std::endl;
 		test(B, h, u, f, H, num);
 		break;
 	case 2:
@@ -37,11 +36,10 @@ int main()
 		h = 9;
 		H = 0.5;
 		if (calc(B, h, u, f, H))
-			std::cout << "Свод обрушения" << std::endl;
+			std::cout << "Г‘ГўГ®Г¤ Г®ГЎГ°ГіГёГҐГ­ГЁГї" << std::endl;
 		else
-			std::cout << "Столб обрушения" << std::endl;
+			std::cout << "Г‘ГІГ®Г«ГЎ Г®ГЎГ°ГіГёГҐГ­ГЁГї" << std::endl;
 		test(B, h, u, f, H, num);
 		break;
 	}
-	_getch();
 }
