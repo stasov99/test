@@ -1,2 +1,2 @@
 all:
-  g++ calc.cpp Source.cpp -o calc
+	g++ calc.cpp Source.cpp -o calc
