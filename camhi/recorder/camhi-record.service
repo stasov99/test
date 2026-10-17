@@ -1,0 +1,20 @@
+# systemd-юнит для круглосуточной записи в облако.
+# Установка:
+#   sudo cp camhi-record.service /etc/systemd/system/
+#   sudo systemctl enable --now camhi-record
+[Unit]
+Description=CamHi continuous RTSP recording to cloud
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=RTSP_URL=rtsp://admin:password@192.168.1.50:554/11
+Environment=RCLONE_REMOTE=cloud:camhi/cam1
+Environment=LOCAL_DIR=/var/lib/camhi/segments
+ExecStart=/opt/camhi/record-to-cloud.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
